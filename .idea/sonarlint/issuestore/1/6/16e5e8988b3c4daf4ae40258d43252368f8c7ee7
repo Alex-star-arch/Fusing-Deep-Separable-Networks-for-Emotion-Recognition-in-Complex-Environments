@@ -1,0 +1,55 @@
+
+ipython:S1192ó"PDefine a constant instead of duplicating this literal 'æ–‡ä»¶æœªé€‰ä¸­' 3 times.(©ú½ä
+python:S1192Í"aDefine a constant instead of duplicating this literal "background-color: transparent;\n" 4 times.(½ï¡şÿÿÿÿ
+~python:S1192+"aDefine a constant instead of duplicating this literal ':/newPrefix/images_test/scan.gif' 4 times.(½ı©£ùÿÿÿÿ
+…python:S1192ä"lDefine a constant instead of duplicating this literal "é»˜è®¤æ¨¡å‹ï¼š_mini_XCEPTION.102-0.66.hdf5" 4 times.(ì®Ì½
+qpython:S1192©"XDefine a constant instead of duplicating this literal "color: rgb(40,148,255);" 3 times.(ÙöåÆ
+hpython:S1192’"JDefine a constant instead of duplicating this literal 'slice.png' 6 times.(ƒ¹Ñúÿÿÿÿ
+ƒpython:S1192š"jDefine a constant instead of duplicating this literal "border-image: url(./images_test/ini.png);" 5 times.(¯É ­
+tpython:S1192"VDefine a constant instead of duplicating this literal 'å®æ—¶æ‘„åƒå·²å…³é—­' 3 times.(¬™€£şÿÿÿÿ
+xpython:S1192µ"_Define a constant instead of duplicating this literal "background-color: transparent;" 4 times.(şİŞ
+_python:S2208"GImport only needed names or import the module and then use its members.(†ÄÅ¼
+dpython:S2208"GImport only needed names or import the module and then use its members.(ë°ÜÁûÿÿÿÿ
+_python:S2208"GImport only needed names or import the module and then use its members.(¾ß€š
+_python:S2208"GImport only needed names or import the module and then use its members.(‘¸¢
+vpython:S116ß"YRename this field "toolButton_camera" to match the regular expression ^[_a-z][_a-z0-9]*$.(¶¤ñÎüÿÿÿÿ
+rpython:S116—"ZRename this field "label_outputResult" to match the regular expression ^[_a-z][_a-z0-9]*$.(·Ûô
+rpython:S116â"URename this field "label_useTime" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ââéåÿÿÿÿÿ
+ppython:S116ë"XRename this field "label_scanResult" to match the regular expression ^[_a-z][_a-z0-9]*$.(±é¡
+npython:S116¯"WRename this field "toolButton_jump" to match the regular expression ^[_a-z][_a-z0-9]*$.(è°
+tpython:S116Ã"WRename this field "textButton_jump" to match the regular expression ^[_a-z][_a-z0-9]*$.(§éıëÿÿÿÿÿ
+opython:S116©"WRename this field "toolButton_file" to match the regular expression ^[_a-z][_a-z0-9]*$.(áÍ’
+vpython:S116§"^Rename this field "actionGoogle_Translate" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ïáí
+opython:S116û"WRename this field "label_picResult" to match the regular expression ^[_a-z][_a-z0-9]*$.(Á±øÄ
+tpython:S116©"WRename this field "actionHTML_type" to match the regular expression ^[_a-z][_a-z0-9]*$.(™•±¤úÿÿÿÿ
+rpython:S116ô"URename this field "label_picTime" to match the regular expression ^[_a-z][_a-z0-9]*$.(½Ú™Åÿÿÿÿÿ
+lpython:S116Í"TRename this field "textEdit_pic" to match the regular expression ^[_a-z][_a-z0-9]*$.(œ²Ï”
+upython:S116ò"XRename this field "toolButton_model" to match the regular expression ^[_a-z][_a-z0-9]*$.(šŸìˆúÿÿÿÿ
+tpython:S116¼"WRename this field "textEdit_camera" to match the regular expression ^[_a-z][_a-z0-9]*$.(£¿½ÿÿÿÿÿ
+spython:S116—"VRename this field "textEdit_model" to match the regular expression ^[_a-z][_a-z0-9]*$.(€úşûÿÿÿÿ
+ƒpython:S101"gRename class "Ui_MainWindow" to match the regular expression ^_?([A-Z_][a-zA-Z0-9]*|[a-z_][a-z0-9_]*)$.( Ìñıùÿÿÿÿ
+6python:S125"Remove this commented out code.(âÙßó
+rpython:S117"VRename this parameter "MainWindow" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ÿ…è¸üÿÿÿÿ
+;python:S1253"Remove this commented out code.(˜ªÏøÿÿÿÿ
+rpython:S1177"VRename this parameter "MainWindow" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÂéÇ´ÿÿÿÿÿ
+gpython:S1007"KRename method "setupUi" to match the regular expression ^[a-z_][a-z0-9_]*$.(ÂéÇ´ÿÿÿÿÿ
+7python:S125€"Remove this commented out code.(ø”Ç«
+7python:S125"Remove this commented out code.(äÅ„ï
+spython:S117±"VRename this parameter "MainWindow" to match the regular expression ^[_a-z][a-z0-9_]*$.(”«Àşÿÿÿÿ
+npython:S100±"QRename method "retranslateUi" to match the regular expression ^[a-z_][a-z0-9_]*$.(”«Àşÿÿÿÿ
+Epython:S1481ì"'Remove the unused local variable "msg".(çŸØ˜üÿÿÿÿ
+wpython:S117®"`Rename this local variable "fileName_choose" to match the regular expression ^[_a-z][a-z0-9_]*$.(ñÑöu
+lpython:S117Ù"TRename this parameter "filePath" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÜÚ›Ñ
+}python:S117ï"`Rename this local variable "fileName_choose" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ë£ïŞúÿÿÿÿ
+<python:S125ˆ"Remove this commented out code.(ƒµ‡ãûÿÿÿÿ
+7python:S125š"Remove this commented out code.(ÆÔœ¦
+python:S101Æ"bRename class "myWindow" to match the regular expression ^_?([A-Z_][a-zA-Z0-9]*|[a-z_][a-z0-9_]*)$.(ôµè»øÿÿÿÿ
+Upython:S5754Ğ"<Specify an exception class to catch or reraise the exception(ˆÊÉ·
+<python:S125Ê"Remove this commented out code.(‚¸Êøÿÿÿÿ
+Mpython:S1656ß"/Remove or correct this useless self-assignment.(Ø½Â±ùÿÿÿÿ
+tpython:S117¨"WRename this local variable "angleX" to match the regular expression ^[_a-z][a-z0-9_]*$.(¡«Œˆşÿÿÿÿ
+tpython:S117©"WRename this local variable "angleY" to match the regular expression ^[_a-z][a-z0-9_]*$.(ñõ¨–ûÿÿÿÿ
+rpython:S117°"ZRename this local variable "newHeight" to match the regular expression ^[_a-z][a-z0-9_]*$.(É®š¡
+qpython:S117®"YRename this local variable "newWidth" to match the regular expression ^[_a-z][a-z0-9_]*$.(²±Û’
+Hpython:S1481¨"*Remove the unused local variable "angleX".(¡«Œˆşÿÿÿÿ
+<python:S125Ğ"Remove this commented out code.(Ç–‚åûÿÿÿÿ

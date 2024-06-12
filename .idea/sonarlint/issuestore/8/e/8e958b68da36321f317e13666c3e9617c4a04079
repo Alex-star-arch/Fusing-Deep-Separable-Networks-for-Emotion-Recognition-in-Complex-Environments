@@ -1,0 +1,11 @@
+
+mpython:S1542"PRename function "simple_CNN" to match the regular expression ^[a-z_][a-z0-9_]*$.(Ñï½Èÿÿÿÿÿ
+ipython:S15429"QRename function "simpler_CNN" to match the regular expression ^[a-z_][a-z0-9_]*$.(ö¥½£
+kpython:S1542m"SRename function "tiny_XCEPTION" to match the regular expression ^[a-z_][a-z0-9_]*$.(ƒâïÖ
+7python:S125Ç"Remove this commented out code.(˜ÈÍ­
+qpython:S1542Ğ"SRename function "mini_XCEPTION" to match the regular expression ^[a-z_][a-z0-9_]*$.(ø­Ğüÿÿÿÿ
+7python:S125§"Remove this commented out code.(˜ÈÍ­
+ppython:S1542±"RRename function "big_XCEPTION" to match the regular expression ^[a-z_][a-z0-9_]*$.(ëÍßıÿÿÿÿ
+7python:S125ç"Remove this commented out code.(˜ÈÍ­
+<python:S125ó"Remove this commented out code.(«Êààıÿÿÿÿ
+7python:S125ù"Remove this commented out code.(äº¹Ş
