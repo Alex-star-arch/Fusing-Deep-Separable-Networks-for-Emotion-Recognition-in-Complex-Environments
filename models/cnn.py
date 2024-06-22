@@ -17,8 +17,8 @@ def simple_CNN(input_shape, num_classes):
     model = Sequential()
     model.add(Convolution2D(filters=16, kernel_size=(7, 7), padding='same',
                             name='image_array', input_shape=input_shape))# simpler-kernel-5*5
-    # padding='same'为在进行卷积或池化操作时，是对输入的图像矩阵边缘补0，避免数据丢失，'valid'则不补
-    model.add(BatchNormalization())#批量规范化，用于通过重新居中和重新缩放来规范化层输入来使人工神经网络的训练更快，更稳定
+    # padding='same'For when the convolution or pooling operation is performed, it is the input image matrix edges are complemented with zeros to avoid data loss and 'valid' is not complemented
+    model.add(BatchNormalization())#Batch normalization for normalizing layer inputs by re-centering and re-scaling to make artificial neural network training faster and more stable
     model.add(Convolution2D(filters=16, kernel_size=(7, 7), padding='same'))
     model.add(BatchNormalization())
     model.add(Activation('relu'))
@@ -57,8 +57,8 @@ def simple_CNN(input_shape, num_classes):
     return model
 
 def simpler_CNN(input_shape, num_classes):
-    #不含GAP，使用FC层
-    #第8层卷积由3*3的改为2*2的，并额外增加一层2*2卷积和一层1*1的逐点卷积，最后的逐点卷积融合了通道间的信息特征，进行了降维，减少参数
+    #No GAP, use FC layer
+    #The 8th layer of convolution is changed from 3*3 to 2*2, and an additional layer of 2*2 convolution and a layer of 1*1 point-by-point convolution are added, and the final point-by-point convolution fuses the information features between the channels, performs dimensionality reduction, and reduces the parameter
     model = Sequential()
     model.add(Convolution2D(filters=16, kernel_size=(5, 5), padding='same',
                             name='image_array', input_shape=input_shape))
@@ -109,7 +109,7 @@ def simpler_CNN(input_shape, num_classes):
     return model
 
 def tiny_XCEPTION(input_shape, num_classes, l2_regularization=0.01):#tiny相对mini的filters减少，output的channel数减少（半）
-    #提取的特征种类减少，更偏向于全局特征
+    #The variety of features extracted is reduced, favoring more global features
     regularization = l2(l2_regularization)
 
     # base
@@ -128,11 +128,11 @@ def tiny_XCEPTION(input_shape, num_classes, l2_regularization=0.01):#tiny相对m
                       padding='same', use_bias=False)(x)
     residual = BatchNormalization()(residual)
 
-    x = SeparableConv2D(8, (3, 3), padding='same',#8为filters，输出空间的维度 （即卷积中滤波器的输出数量）
-                                                  #(3, 3)为kernel_size指明 2D 卷积窗口的高度和宽度，这里是一个整数则为所有空间维度指定相同的值
-                        kernel_regularizer=regularization,# 对该层中的权值进行正则化，即对权值进行限制，使其不至于过大
-                        use_bias=False)(x) # Keras的SeparalbeConv函数是由3*3的depthwise卷积和1*1的pointwise卷积组成，因此可用于升维和降维
-                                           #use_bias为布尔值，False为该层不适用偏置向量
+    x = SeparableConv2D(8, (3, 3), padding='same',#8为filters，Dimension of the output space (i.e., the number of filter outputs in the convolution)
+                                                  #(3, 3)Specify the height and width of the 2D convolution window for kernel_size, where an integer specifies the same value for all spatial dimensions.
+                        kernel_regularizer=regularization,# Regularize the weights in this layer, i.e., limit the weights so that they are not too large
+                        use_bias=False)(x) # Keras' SeparalbeConv function is composed of a 3*3 depthwise convolution and a 1*1 pointwise convolution, so it can be used for ascending and descending dimensions
+                                           #use_bias is a boolean value, False means that the bias vector is not applicable to this layer
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
     x = SeparableConv2D(8, (3, 3), padding='same',
@@ -296,9 +296,9 @@ def mini_XCEPTION(input_shape, num_classes, l2_regularization=0.01):
     x = Conv2D(num_classes, (3, 3),
             #kernel_regularizer=regularization,
             padding='same')(x)
-    x = GlobalAveragePooling2D()(x)#Global Average Pooling（GAP）其实就是将每个通道计算均值，然后用均值表示原来的整个通道图，参数当然大大减小。
-    ##普通的CNN网络通常含有FC层，但是比如VGG16中大约90%的参数都集中在FC层，在网络结构中使用Global Average Pooling代替全连接层，极大减少了参数量。
-    #Xception结构结合了两个最成功的方法：深度可分离卷积和残差结构，不过Xception最后还是使用了全连接层FC，而mini_xception最后使用了GAP而不是FC
+    x = GlobalAveragePooling2D()(x)#Global Average Pooling（GAP）It's really just a matter of calculating the mean value for each channel and then representing the original entire channel map with the mean value, with greatly reduced parameters of course.
+    ##Ordinary CNN networks usually contain FC layers, but for example, about 90% of the parameters in VGG16 are concentrated in the FC layer, and the number of parameters is greatly reduced by using Global Average Pooling instead of the fully connected layer in the network structure.
+    #The Xception structure combines two of the most successful approaches: deeply separable convolution and residual structure, although Xception ended up using the fully connected layer FC, and mini-xception ended up using GAP instead of FC
     output = Activation('softmax',name='predictions')(x)
 
     model = Model(img_input, output)
@@ -334,8 +334,8 @@ def spatial_attention(x):
     return output
 
 def big_XCEPTION(input_shape, num_classes):
-    #相对mini_xception极大地增加了filters，将普通卷积与深度可分离卷积进行浓缩，四次残差深度可分离卷积浓缩为两次，参数量增加，特征抽取相对于原来更偏向于细节
-    #最后还是用GAP降低参数数量，避免过大
+    #Relative to mini-xception greatly increased filters, the ordinary convolution and depth separable convolution is condensed, four residual depth separable convolution is condensed into two, the number of parameters is increased, the feature extraction is more biased towards details relative to the original
+    #In the end, it's better to use GAP to reduce the number of parameters to avoid oversize
     img_input = Input(input_shape)
     #base
     x = Conv2D(32, (3, 3), strides=(2, 2), use_bias=False)(img_input)
