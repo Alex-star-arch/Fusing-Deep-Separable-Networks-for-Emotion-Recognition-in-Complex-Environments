@@ -5,3 +5,4 @@ This research is dedicated to addressing the challenges of model training and ap
 ## Notebook
 The requisite libraries and plugins for running the environment can be found here. Our code is written in Python 3.7. The code for our backbone network structure can be found in the "model" folder.
 Once the environment has been configured correctly, the network model should be trained with "train_emotion_classifier.py". The trained model will then be automatically saved to the user's device. This model can then be used to perform the corresponding emotion recognition task.
+Further details regarding the experiment and related explanations can be found in the code comments.
